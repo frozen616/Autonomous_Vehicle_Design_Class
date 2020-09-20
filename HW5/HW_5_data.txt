@@ -1,0 +1,74 @@
+
+count = 1	Dt [ms] = 500	Encoder left = 244	Encoder right = 120	Battery Voltage = 7.54
+count = 2	Dt [ms] = 500	Encoder left = 247	Encoder right = 128	Battery Voltage = 7.54
+count = 3	Dt [ms] = 500	Encoder left = 245	Encoder right = 131	Battery Voltage = 7.53
+count = 4	Dt [ms] = 500	Encoder left = 244	Encoder right = 131	Battery Voltage = 7.54
+count = 5	Dt [ms] = 500	Encoder left = 248	Encoder right = 135	Battery Voltage = 7.54
+count = 6	Dt [ms] = 500	Encoder left = 248	Encoder right = 135	Battery Voltage = 7.53
+count = 7	Dt [ms] = 500	Encoder left = 247	Encoder right = 140	Battery Voltage = 7.54
+count = 8	Dt [ms] = 500	Encoder left = 251	Encoder right = 146	Battery Voltage = 7.53
+count = 9	Dt [ms] = 500	Encoder left = 248	Encoder right = 149	Battery Voltage = 7.54
+count = 10	Dt [ms] = 500	Encoder left = 249	Encoder right = 127	Battery Voltage = 7.53
+count = 11	Dt [ms] = 500	Encoder left = 555	Encoder right = 460	Battery Voltage = 7.54
+count = 12	Dt [ms] = 500	Encoder left = 557	Encoder right = 470	Battery Voltage = 7.54
+count = 13	Dt [ms] = 500	Encoder left = 559	Encoder right = 481	Battery Voltage = 7.54
+count = 14	Dt [ms] = 500	Encoder left = 558	Encoder right = 491	Battery Voltage = 7.54
+count = 15	Dt [ms] = 500	Encoder left = 557	Encoder right = 498	Battery Voltage = 7.54
+count = 16	Dt [ms] = 500	Encoder left = 559	Encoder right = 499	Battery Voltage = 7.55
+count = 17	Dt [ms] = 500	Encoder left = 559	Encoder right = 500	Battery Voltage = 7.54
+count = 18	Dt [ms] = 500	Encoder left = 558	Encoder right = 514	Battery Voltage = 7.54
+count = 19	Dt [ms] = 500	Encoder left = 557	Encoder right = 525	Battery Voltage = 7.55
+count = 20	Dt [ms] = 500	Encoder left = 559	Encoder right = 524	Battery Voltage = 7.54
+count = 21	Dt [ms] = 500	Encoder left = 827	Encoder right = 821	Battery Voltage = 7.54
+count = 22	Dt [ms] = 500	Encoder left = 825	Encoder right = 825	Battery Voltage = 7.54
+count = 23	Dt [ms] = 500	Encoder left = 827	Encoder right = 818	Battery Voltage = 7.55
+count = 24	Dt [ms] = 500	Encoder left = 826	Encoder right = 832	Battery Voltage = 7.54
+count = 25	Dt [ms] = 500	Encoder left = 827	Encoder right = 833	Battery Voltage = 7.54
+count = 26	Dt [ms] = 500	Encoder left = 826	Encoder right = 834	Battery Voltage = 7.54
+count = 27	Dt [ms] = 500	Encoder left = 828	Encoder right = 842	Battery Voltage = 7.54
+count = 28	Dt [ms] = 500	Encoder left = 827	Encoder right = 839	Battery Voltage = 7.54
+count = 29	Dt [ms] = 500	Encoder left = 827	Encoder right = 842	Battery Voltage = 7.54
+count = 30	Dt [ms] = 500	Encoder left = 828	Encoder right = 846	Battery Voltage = 7.54
+Backword Data: 
+
+count = 1	Dt [ms] = 500	Encoder left = 394	Encoder right = 393	Battery Voltage = 7.53
+count = 2	Dt [ms] = 500	Encoder left = 396	Encoder right = 397	Battery Voltage = 7.54
+count = 3	Dt [ms] = 500	Encoder left = 396	Encoder right = 397	Battery Voltage = 7.54
+count = 4	Dt [ms] = 500	Encoder left = 397	Encoder right = 400	Battery Voltage = 7.54
+count = 5	Dt [ms] = 500	Encoder left = 398	Encoder right = 403	Battery Voltage = 7.54
+count = 6	Dt [ms] = 500	Encoder left = 400	Encoder right = 407	Battery Voltage = 7.54
+count = 7	Dt [ms] = 500	Encoder left = 397	Encoder right = 406	Battery Voltage = 7.54
+count = 8	Dt [ms] = 500	Encoder left = 400	Encoder right = 407	Battery Voltage = 7.53
+count = 9	Dt [ms] = 500	Encoder left = 399	Encoder right = 410	Battery Voltage = 7.54
+count = 10	Dt [ms] = 500	Encoder left = 400	Encoder right = 409	Battery Voltage = 7.53
+count = 11	Dt [ms] = 500	Encoder left = 555	Encoder right = 577	Battery Voltage = 7.54
+count = 12	Dt [ms] = 501	Encoder left = 558	Encoder right = 578	Battery Voltage = 7.55
+count = 13	Dt [ms] = 500	Encoder left = 557	Encoder right = 579	Battery Voltage = 7.54
+count = 14	Dt [ms] = 500	Encoder left = 556	Encoder right = 577	Battery Voltage = 7.55
+count = 15	Dt [ms] = 500	Encoder left = 557	Encoder right = 577	Battery Voltage = 7.55
+count = 16	Dt [ms] = 500	Encoder left = 558	Encoder right = 578	Battery Voltage = 7.54
+count = 17	Dt [ms] = 500	Encoder left = 557	Encoder right = 579	Battery Voltage = 7.55
+count = 18	Dt [ms] = 500	Encoder left = 558	Encoder right = 582	Battery Voltage = 7.54
+count = 19	Dt [ms] = 500	Encoder left = 558	Encoder right = 584	Battery Voltage = 7.54
+count = 20	Dt [ms] = 500	Encoder left = 559	Encoder right = 586	Battery Voltage = 7.54
+count = 21	Dt [ms] = 500	Encoder left = 836	Encoder right = 879	Battery Voltage = 7.54
+count = 22	Dt [ms] = 500	Encoder left = 837	Encoder right = 880	Battery Voltage = 7.54
+count = 23	Dt [ms] = 500	Encoder left = 838	Encoder right = 878	Battery Voltage = 7.54
+count = 24	Dt [ms] = 500	Encoder left = 837	Encoder right = 881	Battery Voltage = 7.54
+count = 25	Dt [ms] = 500	Encoder left = 838	Encoder right = 884	Battery Voltage = 7.53
+count = 26	Dt [ms] = 500	Encoder left = 841	Encoder right = 885	Battery Voltage = 7.54
+count = 27	Dt [ms] = 500	Encoder left = 840	Encoder right = 885	Battery Voltage = 7.54
+count = 28	Dt [ms] = 500	Encoder left = 840	Encoder right = 883	Battery Voltage = 7.54
+count = 29	Dt [ms] = 500	Encoder left = 839	Encoder right = 880	Battery Voltage = 7.53
+count = 30	Dt [ms] = 500	Encoder left = 841	Encoder right = 880	Battery Voltage = 7.54
+25% Left Motor Forward Total = 2471.0	 50% Left Motor Forward Total = 5578.0  	 75% Left Motor Forward Total = 8268.0
+25% Left Motor Backward Total = 3977.0	 50% Left Motor Backward Total = 5573.0	 75% Left Motor Backward Total = 8387.0
+25% Right Motor Forward Total = 1342.0	 50% Right Motor Forward Total = 4962.0	 75% Right Motor Forward Total = 8332.0
+25% Right Motor Backward Total = 4029.0	 50% Right Motor Backward Total = 5797.0	 75% Right Motor Backward Total = 8815.0
+
+Batter Voltage Average for tests = 7.539666666666672
+
+25% Left Motor Forward Average = 247.1	 50% Left Motor Forward Average = 557.8	 75% Left Motor Forward Average = 826.8
+25% Left Motor Backward Average = 397.7	 50% Left Motor Backward Average = 557.3	 75% Left Motor Backward Average = 838.7
+25% Right Motor Forward Average = 134.2	 50% Right Motor Forward Average = 496.2	 75% Right Motor Forward Average = 833.2
+25% Right Motor Backward Average = 402.9	 50% Right Motor Backward Average = 579.7	 75% Right Motor Backward Average = 881.5
