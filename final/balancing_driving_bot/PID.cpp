@@ -14,11 +14,11 @@
 //#define SPEED_PLOT
 
 
-float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output){
+float PID_balance(float desiredAngle, float presentAngle){
   float error = 0; 
   const float kp = 60.0;//60
   const float kd = 0.1;//0.1
-  const float ki = 140.0;//140
+  const float ki = 140.00;//140
   float currentTime = 0.0;
   float dT = 0.0;
   float pid = 0.0;
@@ -26,9 +26,9 @@ float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output
   
 
   static float lastTime = 0.0;
-  static float iterm = 0.0;
+  static float iterm = 0;
 
-  static float prevAngle = 0.0;
+  static float prevAngle = 90;
 
   //read the timer values
   currentTime = (millis()/1000.0); 
@@ -36,7 +36,6 @@ float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output
   lastTime = currentTime;
   
   #ifdef DEBUG_BALANCE
-  Serial.print("Balancing #'s   ");
   Serial.print("currentTime=");
   Serial.print(currentTime);
   Serial.print("\t");
@@ -57,9 +56,9 @@ float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output
   
 
 
-  error = desiredAngle + PID_speed_output - presentAngle;
+  error = desiredAngle - presentAngle;
 
-  #ifdef DEBUG_BALANCE
+  #ifdef DEBUG BALANCE
   Serial.print("error=");
   Serial.print(error);
   Serial.print("\t");
@@ -85,7 +84,7 @@ float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output
   #ifdef DEBUG_BALANCE
   Serial.print("pid=");
   Serial.print(pid);
-  Serial.println("\t");
+  Serial.print("\t");
   #endif
 
     #ifdef PLOT_BALANCE
@@ -93,7 +92,13 @@ float PID_balance(float desiredAngle, float presentAngle, float PID_speed_output
   Serial.print(",");
   #endif
 
-
+  //limit the pid to 255 the max speed 
+  if ( pid > 255 ){
+    pid = 255;
+  }
+  else if (pid < -255){
+    pid = -255;
+  }
 
   return pid;
   
@@ -132,7 +137,7 @@ float PID_left_motor(float left_desired_speed, float left_measured_speed){
     Serial.println("Left Motor PID numbers");
     Serial.print("currentTime=");
     Serial.print(currentTime);
-    Serial.println("");
+    Serial.print("\t");
   #endif
 
   #ifdef LEFT_PLOT_MOTOR
@@ -191,8 +196,11 @@ float PID_left_motor(float left_desired_speed, float left_measured_speed){
   if ( pid > 255 ){
     pid = 255;
   }
-  else if (pid < -255){
-    pid = -255;
+  else if (0 > pid >= -127){
+    pid = 127+pid;
+  }
+  else if (pid < -127){
+    pid = 0; 
   }
 
   return pid;
@@ -233,7 +241,7 @@ float PID_right_motor(float right_desired_speed, float right_measured_speed){
     Serial.println("Right Motor PID numbers");
     Serial.print("currentTime=");
     Serial.print(currentTime);
-    Serial.println("");
+    Serial.print("\t");
   #endif
 
   #ifdef RIGHT_PLOT_MOTOR
@@ -292,108 +300,12 @@ float PID_right_motor(float right_desired_speed, float right_measured_speed){
   if ( pid > 255 ){
     pid = 255;
   }
-  else if (pid < -255){
-    pid = -255;
+  else if (0 > pid >= -127){
+    pid = 127+pid;
   }
-
-  return pid;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-float PID_speed(float desired_speed, float mean_speed){
-  float error = 0; 
-  const float kp = 1.0;
-  const float kd = 0.0;
-  const float ki = 0.0;
-  float currentTime = 0.0;
-  float dT = 0.0;
-  float pid = 0.0;
-  float dterm = 0.0;
-  
-
-  static float lastTime = 0.0;
-  static float iterm = 0;
-
-  static float prev_speed = 0.0;
-
-  //read the timer values
-  currentTime = (millis()/1000.0); 
-  dT = currentTime - lastTime;
-  lastTime = currentTime;
-  
-  #ifdef DEBUG_SPEED
-    Serial.println("----------------------------------------------------------------------");
-    Serial.println("Speed PID #'s");
-    Serial.print("currentTime=");
-    Serial.print(currentTime);
-    Serial.println("");
-  #endif
-
-  #ifdef SPEED_PLOT
-    Serial.print(mean_speed);
-    Serial.print(",");
-  #endif
-
-
-  #ifdef DEBUG_SPEED
-    Serial.print("dT=");
-    Serial.print(dT);
-    Serial.print(" \t");
-  #endif
-
-  
-
-
-  error = desired_speed - mean_speed;
-
-  #ifdef DEBUG_SPEED
-    Serial.print("error=");
-    Serial.print(error);
-    Serial.print("\t");
-  #endif
-
-  #ifdef SPEED_PLOT
-    Serial.print(error);
-    Serial.print(",");
-  #endif
-  
-  //calculate integral term, the cumulative error
-  iterm = iterm + error*dT;
-
-  //calculate derivative term, the rate error
-  dterm = (mean_speed - prev_speed)/dT;
-
-  //update previous to current
-  prev_speed = mean_speed;
-
-  //calculate PID value
-  pid = (error*kp) + (iterm*ki) + (dterm*kd);
-
-  #ifdef DEBUG_SPEED
-    Serial.print("pid=");
-    Serial.print(pid);
-    Serial.println("\t");
-    Serial.println("----------------------------------------------------------------------");
-  #endif
-
-   #ifdef SPEED_PLOT
-    Serial.println(pid);
-  
-  #endif
-
- 
+  else if (pid < -127){
+    pid = 0; 
+  }
 
   return pid;
   

@@ -23,36 +23,14 @@ void stopMotors(void)
   analogWrite(PWMB_RIGHT_PIN, 0);
 }
 
-void stop_right_motor(void)
-{
-  digitalWrite(BIN1_PIN, LOW);
-  analogWrite(PWMB_RIGHT_PIN, 0);
-}
-
-void stop_left_motor(void)
-{
-  digitalWrite(AIN1_PIN, LOW);
-  analogWrite(PWMA_LEFT_PIN, 0);
-}
-
 void drive_left_forward(unsigned char left_PID_out){
   digitalWrite(AIN1_PIN, 0);
   analogWrite(PWMA_LEFT_PIN, left_PID_out); 
 }
 
-void drive_right_forward(unsigned char right_PID_out){
+void drive_right_forward(unsigned char right_motor_speed){
   digitalWrite(BIN1_PIN, 0);
-  analogWrite(PWMB_RIGHT_PIN, right_PID_out);
-}
-
-void drive_left_backward(unsigned char left_PID_out){
-  digitalWrite(AIN1_PIN, 1);
-  analogWrite(PWMA_LEFT_PIN, left_PID_out); 
-}
-
-void drive_right_backward(unsigned char right_PID_out){
-  digitalWrite(BIN1_PIN, 1);
-  analogWrite(PWMB_RIGHT_PIN, right_PID_out);
+  analogWrite(PWMB_RIGHT_PIN, right_motor_speed);
 }
 
 void driveForward(unsigned char speed)
@@ -73,27 +51,15 @@ void driveBackward(unsigned char speed)
 }
 
 
-void balanceBot(float left_PID_out, float right_PID_out){
+void balanceBot(float motorOutput){
   
-  if(left_PID_out>0) {
-    drive_left_backward(char(abs(left_PID_out)));
+  if(motorOutput>0) {
+    driveBackward(char(abs(motorOutput)));
   }
-  if(left_PID_out==0){
-    stop_left_motor();
+  if(motorOutput==0){
+    stopMotors();
   }
-  if(left_PID_out<0) {
-    drive_left_forward(char(abs(left_PID_out)));
+  if(motorOutput<0) {
+    driveForward(char(abs(motorOutput)));
   }
-
-  if(right_PID_out>0) {
-    drive_right_backward(char(abs(right_PID_out)));
-  }
-  if(right_PID_out==0){
-    stop_right_motor();
-  }
-  if(right_PID_out<0) {
-    drive_right_forward(char(abs(right_PID_out)));
-  }
-
-  
 }
